@@ -8,9 +8,10 @@ discord_webhook = os.getenv("DISCORD_WEBHOOK")
 
 # Reddit API credentials
 reddit = praw.Reddit(
-    client_id,
-    client_secret,
+    client_id=client_id,
+    client_secret=client_secret,
     user_agent="anime-top-10-script by u/WhaThaFuc",  # Replace YOUR_USERNAME
+    config_interpolation='basic'  # Add this argument to avoid the deprecation warning in PRAW 8+
 )
 
 # Search subreddit
