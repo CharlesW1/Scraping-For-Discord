@@ -5,6 +5,9 @@ import praw
 client_id = os.getenv("REDDIT_CLIENT_ID")
 client_secret = os.getenv("REDDIT_CLIENT_SECRET")
 discord_webhook = os.getenv("DISCORD_WEBHOOK_ANIME")
+print(client_id)
+print(client_secret)
+print(discord_webhook)
 
 # Reddit API credentials
 reddit = praw.Reddit(
