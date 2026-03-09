@@ -25,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install praw requests  # Install PRAW and requests directly
+          pip install -r requirements.txt
 
       # Run the scraper script
       - name: Run Reddit scraper
@@ -34,4 +34,4 @@ jobs:
           REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
           DISCORD_WEBHOOK_ANIME: ${{ secrets.DISCORD_WEBHOOK_ANIME }}
         run: |
-          python fetchTop10Anime.py 
+          python scrapers/fetchTop10Anime.py 
