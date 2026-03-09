@@ -2,6 +2,12 @@ import os
 import requests
 import praw
 
+try:
+    from dotenv import load_dotenv
+    load_dotenv()  # Loads variables from a .env file if it exists
+except ImportError:
+    pass
+
 client_id = os.getenv("REDDIT_CLIENT_ID")
 client_secret = os.getenv("REDDIT_CLIENT_SECRET")
 discord_webhook = os.getenv("DISCORD_WEBHOOK_ANIME")
